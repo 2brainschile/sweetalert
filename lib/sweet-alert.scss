@@ -180,6 +180,11 @@ body.stop-scrolling {
     display: block;
   }
 
+  input[type="checkbox"] {
+    width: auto;
+    height: auto;
+  }
+
   button {
     $btnBlue: #AEDEF4;
     $btnGray: #D0D0D0;
