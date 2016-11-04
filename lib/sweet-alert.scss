@@ -156,6 +156,10 @@ body.stop-scrolling {
     }
   }
 
+  .sa-input-text {
+    display: none;
+  }
+
   input {
     width: 100%;
     box-sizing: border-box;
@@ -177,7 +181,13 @@ body.stop-scrolling {
     }
   }
   &.show-input input {
-    display: block;
+    //display: block;
+    display: inline;
+  }
+
+  &.show-input .sa-input-text {
+    //display: block;
+    display: inline;
   }
 
   input[type="checkbox"] {

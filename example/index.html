@@ -627,17 +627,19 @@
               '<div style="width: 19em;text-align: justify;font-size: 1em;margin: 0 auto;"><label><input type="checkbox" id="cbox1" value="first_checkbox"> This is the first checkbox</label><br></div>' +
               '</div>',*/
               type: 'input',
-              text: 'Hola Mundo',
+              text: '<p>Estimado Cliente, comprometidos con su seguridad queremos informarle que usted ha realizado la misma transferencia hace xx minutos.</p>' +
+              '<p>Si desea continuar de aceptar las condiciones del servicio para duplicar la transferencia con su consentimiento.</p>',
               inputType: 'checkbox',
               showCancelButton: true,
               closeOnConfirm: false,
               animation: "slide-from-top",
-              html: true
+              html: true,
+              inputDescription: "Aceptar Condiciones"
             },
             function (inputValue, input) {
               console.log("inputValue: ", inputValue);
               console.log("input: ", input.checked);
-              //if (inputValue === false) return false;
+              if (inputValue === false) return false;
 
               if (!input.checked) {
                 swal.showInputError("Debe aceptar las condiciones");
